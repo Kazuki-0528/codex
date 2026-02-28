@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend-and-legacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install backend deps
+        run: pip install -r app/backend/requirements.txt
+      - name: Backend tests
+        run: cd app/backend && pytest
+      - name: Legacy tests
+        run: python -m pytest legacy-reading/test_legacy.py
+
+  frontend-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install frontend deps
+        run: cd app/frontend && npm install
+      - name: Frontend lint
+        run: cd app/frontend && npm run lint
