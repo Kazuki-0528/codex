@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifc:iso_10303_28 xmlns:ifc="http://www.iai-tech.org/ifcXML/IFC2x3/FINAL">
+  <ifc:uos>
+    <ifc:IfcProject id="proj-1">
+      <ifc:Name>Sample Project</ifc:Name>
+    </ifc:IfcProject>
+
+    <ifc:IfcBuilding id="bldg-1">
+      <ifc:Name>HQ Building</ifc:Name>
+    </ifc:IfcBuilding>
+
+    <ifc:IfcBuildingStorey id="floor-1">
+      <ifc:Name>1F</ifc:Name>
+    </ifc:IfcBuildingStorey>
+
+    <ifc:IfcSpace id="space-101">
+      <ifc:Name>Meeting Room</ifc:Name>
+    </ifc:IfcSpace>
+    <ifc:IfcSpace id="space-102">
+      <ifc:Name>Office Room</ifc:Name>
+    </ifc:IfcSpace>
+
+    <ifc:IfcWallStandardCase id="wall-1">
+      <ifc:Name>Exterior Wall North</ifc:Name>
+    </ifc:IfcWallStandardCase>
+    <ifc:IfcWallStandardCase id="wall-2">
+      <ifc:Name>Exterior Wall East</ifc:Name>
+    </ifc:IfcWallStandardCase>
+
+    <ifc:IfcWindow id="win-1">
+      <ifc:Name>Window A</ifc:Name>
+    </ifc:IfcWindow>
+  </ifc:uos>
+</ifc:iso_10303_28>
